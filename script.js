@@ -7,9 +7,9 @@ let highScore = Number(document.querySelector('.highscore').textContent);
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
-  if (!guess && message !== '🎉 Correct Number!') {
+  if (!guess) {
     document.querySelector('.message').textContent = '⛔️ No number!';
-  } else if (guess !== secretNumber && message !== '🎉 Correct Number!') {
+  } else if (guess !== secretNumber) {
     if (score > 0) score -= 50;
     document.querySelector('.score').textContent = score;
     if (score === 0) {
